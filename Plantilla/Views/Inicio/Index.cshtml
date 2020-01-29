@@ -1,0 +1,128 @@
+﻿@{
+    Layout = "~/Views/Shared/LayoutPrivado.cshtml";
+    ViewBag.Icon = "fa-home";
+    ViewBag.Title = "Inicio";
+}
+
+<style>
+    #ifrContenedor {
+        width: 100%;
+        height: 300px;
+    }
+
+    @@media (max-width: 3440px) {
+        #ifrContenedor {
+            width: 100%;
+            height: 780px !important;
+        }
+    }
+
+    @@media (max-width: 2560px) {
+        #ifrContenedor {
+            width: 100%;
+            height: 570px !important;
+        }
+    }
+
+    @@media (max-width: 1920px) {
+        #ifrContenedor {
+            width: 100%;
+            height: 420px !important;
+        }
+    }
+
+    @@media (max-width: 1680px) {
+        #ifrContenedor {
+            width: 100%;
+            height: 360px !important;
+        }
+    }
+
+    @@media (max-width: 1600px) {
+        #ifrContenedor {
+            width: 100%;
+            height: 340px !important;
+        }
+    }
+
+    @@media (max-width: 1539px) {
+        #ifrContenedor {
+            width: 100%;
+            height: 320px !important;
+        }
+    }
+
+    @@media (max-width: 1440px) {
+        #ifrContenedor {
+            width: 100%;
+            height: 300px !important;
+        }
+    }
+
+    @@media (max-width: 1366px) {
+        #ifrContenedor {
+            width: 100%;
+            height: 280px !important;
+        }
+    }
+
+    @@media (max-width: 1280px) {
+        #ifrContenedor {
+            width: 100%;
+            height: 270px !important;
+        }
+    }
+
+    @@media (max-width: 1152px) {
+        #ifrContenedor {
+            width: 100%;
+            height: 240px !important;
+        }
+    }
+
+    @@media (max-width: 1024px) {
+        #ifrContenedor {
+            width: 100%;
+            height: 200px !important;
+        }
+    }
+</style>
+@Html.AntiForgeryToken()
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="row">
+                    <iframe id="ifrContenedor" class="ayudaPaso1" src="@ViewBag.UriPaginaPrincipal" frameborder="0" width="100%" height="300" scrolling="no" allowtransparency="true"></iframe>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 ayudaPaso2">
+                        <div class="col-lg-12">
+                            @*@Html.Action("Top20MasVendidos", "Estadistico")*@
+                        </div>
+                        <div class="col-lg-12">
+                            @*@Html.Action("PromocionVigente", "Promocion")*@
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<ul id="tlyPageGuide">
+    <li class="tlypageguide_right" data-tourtarget=".ayudaPrincipalPaso1">
+        Menú de opciones del portal.
+    </li>
+    <li class="tlypageguide_right" data-tourtarget=".ayudaPrincipalPaso2">
+        Minimiza el menú de la aplicación.
+    </li>
+    <li class="tlypageguide_right" data-tourtarget=".ayudaPrincipalPaso3">
+        Nombre del usuario, al hacer clic muestra información del perfil del usuario.
+    </li>
+    <li class="tlypageguide_bottom" data-tourtarget=".ayudaPrincipalPaso4">
+        Muestra el panel para cambio de rol y perfil de usuario.
+    </li>
+    <li class="tlypageguide_left" data-tourtarget=".ayudaPrincipalPaso5">
+        Área de trabajo.
+    </li>
+</ul>
